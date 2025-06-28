@@ -1,0 +1,8 @@
+{
+    "customer_info": "./data/customer_info.csv",
+    "metric": "./data/metric.csv",
+    "rci": "./data/rci.csv",
+    "vip_rate": "./data/vip_rate.csv",
+    "visit_rate": "./data/visit_rate.csv",
+    "metric_zscored": "./data/metric_zscored.csv"
+}

@@ -1,0 +1,8 @@
+# .streamlit/config.toml에 추가
+[theme]
+base="light"  # 또는 "dark" 가능
+primaryColor="#1C1C1C"         # 모던 블랙 (텍스트/포인트용)
+backgroundColor="#F7F8FA"      # 연한 그레이 화이트 (배경)
+secondaryBackgroundColor="#FFFFFF80"  # glassmorphism 효과를 위해 반투명 화이트
+textColor="#1C1C1C"            # 텍스트용 블랙
+font="sans serif"
