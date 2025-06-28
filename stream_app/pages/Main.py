@@ -21,7 +21,7 @@ import os
 
 load_dotenv()
 api_key = os.getenv('OPEN_API_KEY')
-with open("./assets/marketing_prompt.yaml", "r", encoding="utf-8") as f:
+with open("assets/marketing_prompt.yaml", "r", encoding="utf-8") as f:
     config = yaml.safe_load(f)
 
 # 페이지 설정
