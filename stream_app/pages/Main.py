@@ -21,7 +21,7 @@ import os
 
 load_dotenv()
 api_key = os.getenv('OPEN_API_KEY')
-with open("assets/marketing_prompt.yaml", "r", encoding="utf-8") as f:
+with open("stream_app/assets/marketing_prompt.yaml", "r", encoding="utf-8") as f:
     config = yaml.safe_load(f)
 
 # 페이지 설정
@@ -32,7 +32,7 @@ st.set_page_config(layout="wide")
 # ---------------------------
 @st.cache_data
 def load_data():
-    with open("assets/data_id.json", "r") as f:
+    with open("stream_app/assets/data_id.json", "r") as f:
         data_files = json.load(f)
 
     read_options = {
@@ -43,7 +43,7 @@ def load_data():
     for name, file_path in data_files.items():
         options = read_options.get(name, {})
         url = f"https://drive.google.com/uc?id={file_path}"
-        output = os.path.join("./assets", f"{name}.csv")
+        output = os.path.join("stream_app/assets", f"{name}.csv")
         gdown.download(url, output, quiet=True)
         data[name] = pd.read_csv(output, **options)
 
@@ -57,7 +57,7 @@ def load_data():
     )
 
 customer_info, metric, rci, vip_rate, visit_rate, metric_zscored = load_data()
-logo_image = Image.open('./assets/logo.png')
+logo_image = Image.open('stream_app/assets/logo.png')
 # ---------------------------
 # 사이드바 필터
 # ---------------------------
